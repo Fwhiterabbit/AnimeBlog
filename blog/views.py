@@ -2,7 +2,10 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, SearchForm
+
+
+
 
 # Create your views here.
 
@@ -79,3 +82,13 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+def search(request):
+    form = SearchForm(request.GET)
+    results = []
+    if form.is_valid():
+        author = form.cleaned_data['author']
+        title = form.cleaned_data['title']
+        results = Post.objects.filter(author__icontains=author, title__icontains=title)
+    return render(request, 'search_results.html', {'results': results})

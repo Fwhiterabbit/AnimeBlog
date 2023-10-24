@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.sites',
+    'django.contrib.postgres', # updated
+    'django.contrib.sitemaps', #updated
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
