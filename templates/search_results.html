@@ -5,12 +5,20 @@
     <ul>
         {% for post in results %}
             <li>
-                <h2>{{ post.title }}</h2>
+                <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                    <h2>{{ post.title }}</h2>
+                </a>
+
                 <p>Author: {{ post.author }}</p>
+
                 <hr>
             </li>
+
         {% empty %}
+
             <li>No results found</li>
+
         {% endfor %}
     </ul>
+
 {% endblock %}
