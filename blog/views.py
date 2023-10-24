@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.db.models import Q
 from .models import Post
 from .forms import CommentForm, SearchForm
 
@@ -85,10 +86,12 @@ class PostLike(View):
 
 
 def search(request):
+    print(request)
     form = SearchForm(request.GET)
     results = []
     if form.is_valid():
         author = form.cleaned_data['author']
         title = form.cleaned_data['title']
-        results = Post.objects.filter(author__icontains=author, title__icontains=title)
+        # results = Post.objects.filter(author__icontains=author, title__icontains=title)
+        results = Post.objects.filter(Q(author__username__icontains=author) | Q(title__icontains=title))
     return render(request, 'search_results.html', {'results': results})

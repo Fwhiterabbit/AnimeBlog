@@ -36,7 +36,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 # ALLOWED_HOSTS = ['myanime-blog-4758927d3dc2.herokuapp.com', 'localhost']
-ALLOWED_HOSTS = ['8000-fwhiterabbit-animeblog-nf1xc6pctr5.ws-eu105.gitpod.io', 'localhost']
+ALLOWED_HOSTS = ['8000-fwhiterabbit-animeblog-458glxn8ytp.ws-eu105.gitpod.io', 'localhost']
 
 # Application definition
 
