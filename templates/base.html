@@ -6,6 +6,7 @@
 <head>
     <title>MyAnime Blog</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
@@ -26,8 +27,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">c<span class="red-o">o</span>de<span
-                        class="thin">|star</span></span></span></a>
+            <a href="{% url 'home' %}" class="logo" id="logo" onmouseover="changeText(this)" onmouseleave="resetText(this)">My Anime Blog</a> <!-- LOGO GOES HERE-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -108,6 +108,8 @@
             alert('Post has been copied to the clipboard.');
         };
     </script>
+
+<script src="../static/Script/scripts.js"></script>
 </body>
 
 </html>

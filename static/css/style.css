@@ -140,3 +140,15 @@ body {
     background: transparent;
     border: none;
 }
+
+---------LOGO----------
+
+.logo {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff69b4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+    text-decoration: none;
+}
