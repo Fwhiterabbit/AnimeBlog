@@ -96,6 +96,17 @@
             let alert = new bootstrap.Alert(messages);
             alert.close();
         }, 2500);
+
+
+        document.getElementById('copy-url-btn').onclick = function() {
+            var dummyInput = document.createElement('input');
+            document.body.appendChild(dummyInput);
+            dummyInput.value = window.location.href;
+            dummyInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummyInput);
+            alert('Post has been copied to the clipboard.');
+        };
     </script>
 </body>
 

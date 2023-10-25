@@ -58,7 +58,10 @@ INSTALLED_APPS = [
     'django_summernote',
     'crispy_forms',
     'blog',
+    'django_social_share'
 ]
+
+# INSTALLED_APPS += ['django_social_share']
 
 SITE_ID = 1
 
@@ -99,6 +102,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request', # NEW for social share
             ],
         },
     },

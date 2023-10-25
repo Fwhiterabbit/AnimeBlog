@@ -1,5 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 {% load crispy_forms_tags %}
+{% load social_share %}
 
 <div class="masthead">
     <div class="container">
@@ -61,6 +62,17 @@
                 </div>
             </div>
         </div>
+
+
+        <div class="social-share">
+            Share this post:
+            <br>
+            {% post_to_whatsapp post.get_absolute_url 'Share on WhatsApp' 'whatsapp-share-link' %}
+            {% post_to_twitter post.get_absolute_url 'Share on Twitter' %}
+            <button id="copy-url-btn">Save Post to Clipboard</button>
+            <!-- Add other social media share buttons as needed -->
+        </div>
+
     </div>
     <div class="row">
         <div class="col">
