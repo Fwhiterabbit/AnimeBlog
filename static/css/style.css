@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
 body {
     background-color: #F9FAFC;
 }
@@ -9,9 +11,6 @@ body {
     color: #4A4A4F;
 }
 
-.red-o {
-    color: #E84610;
-}
 
 .thin {
     font-weight: 300;
@@ -70,20 +69,13 @@ body {
 .masthead-image {
     position: relative;
     overflow: hidden;
+    height: 300px; /* Adjust the height as needed */
 }
 
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
+.masthead-image img {
+    width: 100%; /* Adjust the width as needed */
+    height: 100%; /* Adjust the height as needed */
+    object-fit: cover; /* or use "contain" to fit within the container */
 }
 
 .post-link {
@@ -97,8 +89,10 @@ body {
 }
 
 .post-title {
-    margin-top: 20%;
+    margin-top: 5%;
     margin-left: 5%;
+    font-size: 28px;
+    font-family: 'Kalam', cursive;
 }
 
 .post-subtitle {
@@ -144,11 +138,9 @@ body {
 ---------LOGO----------
 
 .logo {
-    font-family: 'Arial', sans-serif;
-    font-size: 36px;
-    font-weight: bold;
-    color: #ff69b4;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    transition: 0.5s;
-    text-decoration: none;
+    font-family: 'Arial', sans-serif; /* Replace with a suitable Japanese font if available */
+    font-size: 24px;
+    color: #ff69b4; /* Pink color or any other suitable color */
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }

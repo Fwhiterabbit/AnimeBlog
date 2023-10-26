@@ -5,4 +5,3 @@ function changeText(element) {
     element.style.fontFamily = "Arial, 'Kanit', sans-serif";
     element.style.fontSize = "28px";
 }
-
